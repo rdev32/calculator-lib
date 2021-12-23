@@ -36,5 +36,9 @@ export class basicOperations {
             console.log("Uses only two numbers.")
         }
     }
+
+    static raisedTo(number, exponent) {
+        return number ** exponent;
+    }
 }
 
