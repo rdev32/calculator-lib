@@ -15,5 +15,14 @@
   ],
   "type": "module",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donatto-minaya/npm-ax-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/donatto-minaya/npm-ax-calculator/issues"
+  },
+  "homepage": "https://github.com/donatto-minaya/npm-ax-calculator#readme"
 }
