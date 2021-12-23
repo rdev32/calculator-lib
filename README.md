@@ -1,4 +1,4 @@
-# Npm Ax-Calculator
+# Npm Ax-Calculator `BETA`
 This is a quick mathematical calculator
 
 ```js
@@ -13,7 +13,7 @@ From basic operations...
 ```js
 BasicOperations.sum(1,5,3, ...); // -> 9
 BasicOperations.substract(250, 10, 35, ...); // -> 205
-Fractions.sum(1, 2, 4, 6); // 1/2 + 4/6 -> 7/6
+Fractions.sum(1, 2, -4, 6); // 1/2 + (-4/6) -> 1/6
 Area.triangle(2, 4); // -> 4
 ```
 
