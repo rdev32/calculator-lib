@@ -1,0 +1,19 @@
+{
+  "name": "ax-calculator",
+  "version": "1.0.0",
+  "description": "Complex Math Calculator",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calculadora",
+    "calculator",
+    "matemáticas",
+    "math",
+    "chemistry"
+  ],
+  "type": "module",
+  "author": "",
+  "license": "ISC"
+}
