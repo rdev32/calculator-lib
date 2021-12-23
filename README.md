@@ -1,11 +1,13 @@
 # Npm Ax-Calculator `BETA`
 This is a quick mathematical calculator
 
+### Why `beta`?
+Not much has happened since the creation of this package, although the tested exercises return a result, some of them may return an undefined result. <br><br>
+`More formulas will be added to the calculator, in the meantime we will explain how to use what it contains.`
+
 ```js
 import {Area, BasicOperations} from './node_modules/ax-calculator/src/main.js'
 ```
-
-`More formulas will be added to the calculator, in the meantime we will explain how to use what it contains.`
 
 ### Sample
 From basic operations...
