@@ -8,4 +8,4 @@ export const BasicOperations = basicOperations;
 export const Area = area;
 export const Fractions = fractions; 
 
-console.log(Fractions.sum(10,12,12,20))
+console.log(Area.circle(2))
