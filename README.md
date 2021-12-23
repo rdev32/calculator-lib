@@ -1,6 +1,10 @@
 # Npm Ax-Calculator
 This is a quick mathematical calculator
 
+```js
+import {Area, BasicOperations} from './node_modules/ax-calculator/src/main.js'
+```
+
 `More formulas will be added to the calculator, in the meantime we will explain how to use what it contains.`
 
 ### Sample

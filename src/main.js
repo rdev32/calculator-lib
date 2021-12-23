@@ -7,5 +7,3 @@ import { fractions } from './arithmetic/fractions.js';
 export const BasicOperations = basicOperations;
 export const Area = area;
 export const Fractions = fractions; 
-
-console.log(Area.circle(2))
