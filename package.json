@@ -1,6 +1,6 @@
 {
   "name": "ax-calculator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Complex Math Calculator",
   "main": "main.js",
   "scripts": {

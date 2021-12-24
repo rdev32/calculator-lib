@@ -1,5 +1,3 @@
-import { PI } from '../constants/constants.js';
-
 export class area {
     static triangle(base, height) {
         return (base * height) / 2
@@ -10,8 +8,12 @@ export class area {
     }
 
     static circle(radio) {
-        return PI * (radio * radio)
+        return (radio * radio) + "π"
     }
+
+    /**
+        @param side The measure of one side of the square
+    **/
 
     static square(side) {
         try {

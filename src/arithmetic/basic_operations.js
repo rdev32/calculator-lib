@@ -37,8 +37,18 @@ export class basicOperations {
         }
     }
 
-    static raisedTo(number, exponent) {
-        return number ** exponent;
+    static raiseTo(number, exponent) {
+        if(exponent == 0) {
+            return "1"
+        }
+
+        else if(exponent < 0) {
+            return `1/${number ** (exponent * -1)}`
+        }
+
+        else {
+            return (number ** exponent).toString();
+        }
     }
 }
 
