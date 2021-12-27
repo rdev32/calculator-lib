@@ -22,18 +22,18 @@ export class operations {
 
     **/
 
-    static log(base = 2, argument, logarithm) {
-        if(base == null) {
-            return String(Math.pow(argument, 1/logarithm));
-        }
+    // static log(base = 2, argument, logarithm) {
+    //     if(base == null) {
+    //         return String(Math.pow(argument, 1/logarithm));
+    //     }
 
-        else if(argument == null) {
-            return String(base ** argument);
-        }
+    //     else if(argument == null) {
+    //         return String(base ** argument);
+    //     }
 
-        else {
+    //     else {
             
-        }
+    //     }
 
-    }
+    // }
 }
