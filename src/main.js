@@ -13,5 +13,3 @@ export const Fractions = fractions;
 export const Base = base; 
 export const Segments = segments;
 export const Operations = operations;
-
-console.log(Operations.hipotenuse(2,4))
