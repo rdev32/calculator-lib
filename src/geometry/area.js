@@ -16,13 +16,18 @@ export class area {
     **/
 
     static square(side) {
-        try {
-            return side * side
+        return String(side * side)
+    }
+
+    static square2(diagonal) {
+        var top = diagonal ** diagonal;
+
+        if(Number.isInteger(top/2)) {
+            return String(top / 2)            
         }
 
-        catch {
-            console.log("ES: Un cuadrado tiene todos los lados iguales, esta función requiere un solo parámetro.")
-            console.log("EN: A square has all sides equal, this function requires only one parameter.")
+        else {
+            return String(top + "/2")
         }
     }
 

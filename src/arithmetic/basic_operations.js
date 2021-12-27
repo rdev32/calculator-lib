@@ -50,5 +50,18 @@ export class basicOperations {
             return (number ** exponent).toString();
         }
     }
+
+    /**
+    ʳᵒᵒᵗ√number
+
+    If you do not enter a root, you will get the square root by default.
+
+    @param {number} number The number whose root you need
+    @param {number} root The root you wish to obtain
+    **/
+
+    static root(number, root = 2) {
+        return String(number ** (1/root))
+    }
 }
 
