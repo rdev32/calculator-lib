@@ -1,20 +1,41 @@
 export class basicOperations {
-    static sum(...parameters) {
-        return parameters.reduce((previous, current) => {
-            return previous + current;
+    static sum(...parameters) {        
+        var result = parameters.reduce((previous, current) => {
+            return  previous + current
         });
+
+        return {
+            result,
+            toNegative() {
+                return result * -1;
+            }
+        }
     }
 
     static substract(...parameters) {
-        return parameters.reduce((previous, current) => {
+        var result =  parameters.reduce((previous, current) => {
             return previous - current;
         });
+
+        return {
+            result,
+            toNegative() {
+                return result * -1;
+            }
+        }
     }
 
     static product(...parameters) {
-        return parameters.reduce((previous, current) => {
+        var result = parameters.reduce((previous, current) => {
             return previous * current;
         });
+
+        return {
+            result,
+            toNegative() {
+                return result * -1;
+            }
+        }
     }
 
     static division(param1, param2) {
