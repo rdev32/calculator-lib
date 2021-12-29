@@ -13,6 +13,3 @@ export const Fractions = fractions;
 export const Base = base; 
 export const Segments = segments;
 export const Operations = operations;
-
-
-console.log(BasicOperations.substract(1,2,4).toNegative())

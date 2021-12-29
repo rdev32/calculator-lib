@@ -9,23 +9,35 @@ Not much has happened since the creation of this package, although the tested ex
 import {Area, BasicOperations} from './node_modules/ax-calculator/src/main.js'
 ```
 
-### Sample
-From basic operations...
+### Summary
+You have all the basic operations
 
 ```js
+//Sum, substract, product, division, module, raise to, root
 BasicOperations.sum(1,5,3, ...); // -> 9
 BasicOperations.substract(250, 10, 35, ...); // -> 205
-Fractions.sum(1, 2, -4, 6); // 1/2 + (-4/6) -> 1/6
-Area.triangle(2, 4); // -> 4
+BasicOperations.root(1296, 4) // -> 6
+BasicOperations.raiseTo(2, 5) // -> 32
 ```
 
-To more complex future operations
+You can also perform other operations according to your needs.
 ```js
 Operations.hypotenuse(3, 4) // -> 5
-Vectors.substract((-3,4), (5, -2)) // (-8,6)
+Base.binaryToBase10(100101) // -> 37
+Area.circle(2) // -> 4π
+Fractions.division(1,6,-5,9) // -> -(3/2)
+Base.toBase(20, 3) // -> 202
 ```
 
 All methods will return a value that you can store in a variable for later display.
+```js
+//Some methods you will need to specify that you need the result, you can set it to negative
+var result = BasicOperations.sum(1,2,3)
+console.log(result) // Output: { result: 6, toNegative: [Function: toNegative] }
+console.log(result.result) // Output: 6
+console.log(result.toNegative()) // Output: -6
+
+```
 <hr></hr>
 
 Some methods contain REST type parameters
