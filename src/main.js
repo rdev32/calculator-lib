@@ -15,5 +15,3 @@ export const Base = base;
 export const Segments = segments;
 export const Operations = operations;
 export const Percentage = percentage;
-
-console.log(Percentage.percentFromPercent(10, 10, 40))
