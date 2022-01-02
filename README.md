@@ -1,6 +1,8 @@
 # Npm Ax-Calculator `BETA`
 This is a quick mathematical calculator
 
+<a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/v/ax-calculator)</a>
+<a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/dm/ax-calculator)</a>
 ### Why `beta`?
 Not much has happened since the creation of this package, although the tested exercises return a result, some of them may return an undefined result. <br><br>
 `More formulas will be added to the calculator, in the meantime we will explain how to use what it contains.`
