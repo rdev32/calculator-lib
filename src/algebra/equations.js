@@ -16,9 +16,33 @@ export class equations {
             return x;
         }
 
-        else {    
-            var x1 = (((-1 * b) + Math.sqrt((b*b) - (4 * a * c))) / (2 * a)).toFixed(2)
-            var x2 = (((-1 * b) - Math.sqrt((b*b) - (4 * a * c))) / (2 * a)).toFixed(2)
+        else {
+            var internal = (b*b) - (4 * a * c);
+            var interna2 = Math.sqrt(internal);
+            console.log(interna2)
+
+            if(!Number.isInteger(interna2)) {
+                interna2 = "√" + internal;
+            }
+            
+            if(internal < 0) {
+                interna2 = "𝒾√" + String(-1 * internal)
+            }
+            
+            if(typeof(interna2) == 'string') {
+                var x1 = String(-1 * b) + "/" + String(2 * a) + " + " + interna2 + "/" + String(2 * a)
+                var x2 = String(-1 * b) + "/" + String(2 * a) + " - " + interna2 + "/" + String(2 * a)
+                
+                return {
+                    x1, x2
+                }
+            }
+
+            else {
+                var x1 = (((-1 * b) + interna2) / (2 * a)).toFixed(2)
+                var x2 = (((-1 * b) - interna2) / (2 * a)).toFixed(2)
+            }
+            
 
             if(x1 < 1) {
                 var top = ((-1 * b) + Math.sqrt((b*b) - (4 * a * c)));

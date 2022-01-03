@@ -1,4 +1,8 @@
 export class basicOperations {
+    /**
+    Returns the sum of the numbers
+    @param {number} parameters You can add as many numbers as you wish
+    **/
     static sum(...parameters) {        
         var result = parameters.reduce((previous, current) => {
             return  previous + current
@@ -12,6 +16,10 @@ export class basicOperations {
         }
     }
 
+    /**
+    Returns the substract of the numbers
+    @param {number} parameters You can add as many numbers as you wish
+    **/
     static substract(...parameters) {
         var result =  parameters.reduce((previous, current) => {
             return previous - current;
@@ -25,6 +33,10 @@ export class basicOperations {
         }
     }
 
+    /**
+    Returns the product of the numbers
+    @param {number} parameters You can add as many numbers as you wish
+    **/
     static product(...parameters) {
         var result = parameters.reduce((previous, current) => {
             return previous * current;
@@ -38,24 +50,18 @@ export class basicOperations {
         }
     }
 
+    /**
+    Returns the division by 2 numbers
+    **/
     static division(param1, param2) {
-        try {
-            return param1 / param2
-        }
-
-        catch(e) {
-            console.log("You cannot divide more than two numbers.")
-        }
+        return (param1 / param2).toFixed(2)
     }
 
+    /**
+    Returns the remainder of a division by 2 numbers
+    **/
     static module(param1, param2) {
-        try {
-            return param1 % param2
-        }
-
-        catch(e) {
-            console.log("Uses only two numbers.")
-        }
+        return (param1 / param2).toFixed(2)
     }
 
     static raiseTo(number, exponent) {
