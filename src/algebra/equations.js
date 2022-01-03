@@ -12,27 +12,44 @@ export class equations {
 
     static secondDegree(a, b, c) {
         if(typeof(c) == 'undefined') {
+            var x;
             var internal = (b * -1) / a;
+            
             if(!Number.isInteger(internal)) {
                 var top = b * - 1
                 var bottom = a
-
+                
                 //Si la raíz cuadrada es un numero entero
                 if(Number.isInteger(Math.sqrt(b * - 1))) {
                     top = Math.sqrt(b * - 1)
                 }
-
+                
                 //Si la raíz cuadrada es un numero entero
                 if(Number.isInteger(Math.sqrt(a))) {
                     bottom = Math.sqrt(a)
                 }
-
+                
                 internal = String(top) + "/" + bottom
-                var x = `±√${internal}`
+                x = `±√${internal}`
             }
-
+            
             else {
-                var x = Math.sqrt(internal);
+                if(internal < 0) {
+                    if(Number.isInteger(Math.sqrt(internal * -1))) {
+                        internal = Math.sqrt(internal * -1)
+                        x = `±${internal}𝓲`
+                    }
+
+                    else {
+                        x = "𝓲√" + (internal * -1)
+                    }
+
+                }
+
+                else {
+                    x = Math.sqrt(internal);
+                }
+                
             }
 
             return x;
@@ -41,14 +58,13 @@ export class equations {
         else {
             var internal = (b*b) - (4 * a * c);
             var interna2 = Math.sqrt(internal);
-            console.log(interna2)
 
             if(!Number.isInteger(interna2)) {
                 interna2 = "√" + internal;
             }
             
             if(internal < 0) {
-                interna2 = `\U+1d4be√${String(-1 * internal)}`
+                interna2 = `𝓲√${String(-1 * internal)}`
             }
             
             if(typeof(interna2) == 'string') {
