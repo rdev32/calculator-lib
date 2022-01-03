@@ -17,3 +17,5 @@ export const Segments = segments;
 export const Operations = operations;
 export const Percentage = percentage;
 export const Equations = equations;
+
+console.log(Equations.secondDegree(7, 4))
