@@ -1,19 +1,21 @@
 {
   "name": "ax-calculator",
-  "version": "1.0.15.2",
+  "version": "1.0.16",
   "description": "Complex Math Calculator",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "calculadora",
     "calculator",
-    "matemáticas",
     "math",
     "chemistry",
     "algebra",
-    "geometry"
+    "geometry",
+    "fractions",
+    "percentages",
+    "area",
+    "operations"
   ],
   "type": "module",
   "author": "",
