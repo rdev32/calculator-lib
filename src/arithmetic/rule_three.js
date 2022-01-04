@@ -1,69 +1,197 @@
 export class rule_three {
+    /**
+    @param {string} type Can be direct or inverse
+    **/
     static simple(type, a, b, c, d) {
         if(type == 'direct') {
             if(a === undefined) {
-                a = (b * c) / d;
+                var top = b * c;
+                var bottom = d;
+
+                a = top / bottom;
+
+                var bober = top < 0 ? true : false
     
                 if(!Number.isInteger(a)) {
-                    a = `${b * c}/${d}`;
-                    return a;
+                    if(bober == true) {
+                        top = top * -1
+                    }
+
+                    for(let i = 2; i < 13; i++) {
+                        while((top / i > 0) && ((bottom / i) > 0)) {
+                            if((top % i == 0) && ((bottom % i) == 0)) {
+                                top = top / i;
+                                bottom = bottom / i;
+                            }
+
+                            else {
+                                if(bober) {
+                                    a = `-${top}/${bottom}`;
+                                }
+                                
+                                else {
+                                    a = `${top}/${bottom}`;
+                                }
+
+                                break; 
+                            }
+                        }
+                    }
                 }
                 
-                else {
-                    return a;
-                }
+                return a;
             }
     
             else if(b === undefined) {
-                b = (a * d) / c;
+                var top = a * d;
+                var bottom = c;
+
+                b = top / bottom;
+
+                var bober = top < 0 ? true : false
                 
                 if(!Number.isInteger(b)) {
-                    b = `${a * d}/${c}`;
-                    return b;
+                    if(bober == true) {
+                        top = top * -1
+                    }
+
+                    for(let i = 2; i < 13; i++) {
+                        while((top / i > 0) && ((bottom / i) > 0)) {
+                            if((top % i == 0) && ((bottom % i) == 0)) {
+                                top = top / i;
+                                bottom = bottom / i;
+                            }
+
+                            else {
+                                if(bober) {
+                                    b = `-${top}/${bottom}`;
+                                }
+                                
+                                else {
+                                    b = `${top}/${bottom}`;
+                                }
+
+                                break; 
+                            }
+                        }
+                    }
                 }
-                
-                else {
-                    return b;
-                }
+
+                return b;
             }
             
             else if(c === undefined) {
-                c = (d * a) / b;
+                var top = d * a;
+                var bottom = b;
+
+                c = top / bottom;
+
+                var bober = top < 0 ? true : false
     
                 if(!Number.isInteger(b)) {
-                    b = `${d * a}/${b}`;
-                    return c;
+                    if(bober == true) {
+                        top = top * -1
+                    }
+
+                    for(let i = 2; i < 13; i++) {
+                        while((top / i > 0) && ((bottom / i) > 0)) {
+                            if((top % i == 0) && ((bottom % i) == 0)) {
+                                top = top / i;
+                                bottom = bottom / i;
+                            }
+
+                            else {
+                                if(bober) {
+                                    c = `-${top}/${bottom}`;
+                                }
+                                
+                                else {
+                                    c = `${top}/${bottom}`;
+                                }
+
+                                break; 
+                            }
+                        }
+                    }
                 }
-                
-                else {
-                    return c;
-                }
+
+                return c;
             }
     
             else {
-                d = (b * c) / a;
+                var top = b * c;
+                var bottom = a;
+
+                d = top / bottom;
+
+                var bober = top < 0 ? true : false
 
                 if(!Number.isInteger(b)) {
-                    d = `${b * c}/${a}`;
-                    return d;
+                    if(bober == true) {
+                        top = top * -1
+                    }
+
+                    for(let i = 2; i < 13; i++) {
+                        while((top / i > 0) && ((bottom / i) > 0)) {
+                            if((top % i == 0) && ((bottom % i) == 0)) {
+                                top = top / i;
+                                bottom = bottom / i;
+                            }
+
+                            else {
+                                if(bober) {
+                                    d = `-${top}/${bottom}`;
+                                }
+                                
+                                else {
+                                    d = `${top}/${bottom}`;
+                                }
+
+                                break; 
+                            }
+                        }
+                    }
                 }
-                
-                else {
-                    return d;
-                }
+
+                return d;
             }
         }
 
-        if(type == 'inverse') {
+        else if (type == 'inverse') {
             if(a === undefined) {
-                a = (b * d) / c;
+                var top = b * d;
+                var bottom = c;
+
+                a = top / bottom;
+
+                var bober = top < 0 ? true : false
 
                 if(!Number.isInteger(a)) {
-                    a = `${b * d}/${c}`;
-                    return a;
-                }
-                
-                else {
+                    if(bober == true) {
+                        top = top * -1
+                    }
+
+                    for(let i = 2; i < 13; i++) {
+                        while((top / i > 0) && ((bottom / i) > 0)) {
+                            if((top % i == 0) && ((bottom % i) == 0)) {
+                                top = top / i;
+                                bottom = bottom / i;
+                            }
+
+                            else {
+                                if(bober) {
+                                    a = `-${top}/${bottom}`;
+                                }
+                                
+                                else {
+                                    a = `${top}/${bottom}`;
+                                }
+
+                                break; 
+                            }
+                        }
+                    }
+
                     return a;
                 }
             }
@@ -77,13 +205,33 @@ export class rule_three {
                 var bober = top < 0 ? true : false
 
                 if(!Number.isInteger(b)) {
-                    b = `${top}/${bottom}`;
-                    return b;
+                    if(bober == true) {
+                        top = top * -1
+                    }
+
+                    for(let i = 2; i < 13; i++) {
+                        while((top / i > 0) && ((bottom / i) > 0)) {
+                            if((top % i == 0) && ((bottom % i) == 0)) {
+                                top = top / i;
+                                bottom = bottom / i;
+                            }
+
+                            else {
+                                if(bober) {
+                                    b = `-${top}/${bottom}`;
+                                }
+                                
+                                else {
+                                    b = `${top}/${bottom}`;
+                                }
+
+                                break; 
+                            }
+                        }
+                    }
                 }
-                
-                else {
-                    return b;
-                }
+
+                return b;
             }
 
             else if(c === undefined) {
@@ -99,8 +247,26 @@ export class rule_three {
                         top = top * -1
                     }
 
-                    c = `${top}/${bottom}`;
-                    return c;
+                    for(let i = 2; i < 13; i++) {
+                        while((top / i > 0) && ((bottom / i) > 0)) {
+                            if((top % i == 0) && ((bottom % i) == 0)) {
+                                top = top / i;
+                                bottom = bottom / i;
+                            }
+
+                            else {
+                                if(bober) {
+                                    c = `-${top}/${bottom}`;
+                                }
+                                
+                                else {
+                                    c = `${top}/${bottom}`;
+                                }
+
+                                break;
+                            }
+                        }
+                    }
                 }
 
                 return c;
@@ -119,7 +285,7 @@ export class rule_three {
                         top = top * -1
                     }
 
-                    for(let i = 2; i < 13; i++) {                            
+                    for(let i = 2; i < 13; i++) {
                         while((top / i > 0) && ((bottom / i) > 0)) {
                             if((top % i == 0) && ((bottom % i) == 0)) {
                                 top = top / i;
@@ -143,9 +309,13 @@ export class rule_three {
                 return d;
             }
         }
+
+        else {
+            return "You must write 'direct' or 'inverse', there are no other ways."
+        }
     }
 
-    static compound() {
+    // static compound() {
 
-    }
+    // }
 }
