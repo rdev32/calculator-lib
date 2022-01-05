@@ -1,34 +1,40 @@
-# Npm Ax-Calculator `BETA`
+# Npm Ax-Calculator
 This is a quick mathematical calculator
+
+> Please be [informed](https://github.com/donatto-minaya/npm-ax-calculator/releases) of every change that is made to this calculator, many more operations are being added that can help you and an example of use is given.
 
 <a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/v/ax-calculator)</a>
 <a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/dm/ax-calculator)</a>
-### Why `beta`?
-Not much has happened since the creation of this package, although the tested exercises return a result, some of them may return an undefined result. <br><br>
-`More formulas will be added to the calculator, in the meantime we will explain how to use what it contains.`
+
+### Usage
+
+This calculator can be used in node.js
+```
+npm i ax-calculator
+```
 
 ```js
-import {Area, BasicOperations} from './node_modules/ax-calculator/src/main.js'
+// Currently, you have these different classes that can help you
+// BasicOperations Area, Fractions Base, Operations, Percentage, Equations, RuleOfThree
+import { Area, BasicOperations } from './node_modules/ax-calculator/src/main.js'
 ```
 
 ### Summary
-You have all the basic operations
+Each class contains its respective functions, which will return a string or a number depending on the parameters you have specified.
 
 ```js
 //Sum, substract, product, division, module, raise to, root
-BasicOperations.sum(1,5,3, ...); // -> 9
 BasicOperations.substract(250, 10, 35, ...); // -> 205
 BasicOperations.root(1296, 4) // -> 6
 BasicOperations.raiseTo(2, 5) // -> 32
-```
 
-You can also perform other operations according to your needs.
-```js
 Operations.hypotenuse(3, 4) // -> 5
 Base.binaryToBase10(100101) // -> 37
 Area.circle(2) // -> 4π
 Fractions.division(1,6,-5,9) // -> -(3/2)
 Base.toBase(20, 3) // -> 202
+
+Equations.secondDegree(2, -3, 3) // Output: { x1: '3/4 + 𝓲√15/4' , x2: '3/4 - 𝓲√15/4'  }
 ```
 
 All methods will return a value that you can store in a variable for later display.

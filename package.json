@@ -1,6 +1,6 @@
 {
   "name": "ax-calculator",
-  "version": "1.0.16",
+  "version": "1.0.18",
   "description": "Complex Math Calculator",
   "main": "main.js",
   "scripts": {
@@ -8,6 +8,7 @@
   },
   "keywords": [
     "calculator",
+    "equations",
     "math",
     "chemistry",
     "algebra",
@@ -20,7 +21,6 @@
   "type": "module",
   "author": "",
   "license": "Apache-2.0",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/donatto-minaya/npm-ax-calculator.git"

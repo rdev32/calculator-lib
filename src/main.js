@@ -19,5 +19,3 @@ export const Operations = operations;
 export const Percentage = percentage;
 export const Equations = equations;
 export const RuleOfThree = rule_three;
-
-console.log(RuleOfThree.simple('inverse', 210, undefined, 12, 20))
