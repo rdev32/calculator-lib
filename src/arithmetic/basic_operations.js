@@ -90,5 +90,21 @@ export class basicOperations {
     static root(number, root = 2) {
         return String(number ** (1/root))
     }
+
+    /**
+    - Return the factorial of a number
+
+    @param {number} number 
+    **/
+
+    static factorial(number) {
+        var result;
+
+        for(var i = number- 1; i > 1; i--) {
+            result = (number *= i)
+        }
+
+        return result;
+    }
 }
 
