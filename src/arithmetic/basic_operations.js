@@ -65,16 +65,22 @@ export class basicOperations {
     }
 
     static raiseTo(number, exponent) {
-        if(exponent == 0) {
-            return "1"
-        }
-
-        else if(exponent < 0) {
-            return `1/${number ** (exponent * -1)}`
+        if(typeof number === 'string' || typeof exponent === 'string') {
+            return "You must enter a number"
         }
 
         else {
-            return (number ** exponent).toString();
+            if(exponent == 0) {
+                return "1"
+            }
+    
+            else if(exponent < 0) {
+                return `1/${number ** (exponent * -1)}`
+            }
+    
+            else {
+                return (number ** exponent).toString();
+            }
         }
     }
 
@@ -88,7 +94,13 @@ export class basicOperations {
     **/
 
     static root(number, root = 2) {
-        return String(number ** (1/root))
+        if(typeof number === 'string' || typeof root === 'string') {
+            return "You must enter a number"
+        }
+
+        else {
+            return String(number ** (1/root))
+        }
     }
 
     /**
@@ -100,11 +112,17 @@ export class basicOperations {
     static factorial(number) {
         var result;
 
-        for(var i = number- 1; i > 1; i--) {
-            result = (number *= i)
+        if(typeof number === 'string') {
+            return "You must enter a number"
         }
 
-        return result;
+        else {
+            for(var i = number- 1; i > 1; i--) {
+                result = (number *= i)
+            }
+    
+            return result;
+        }
     }
 }
 
