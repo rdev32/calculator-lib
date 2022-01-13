@@ -112,7 +112,7 @@ export class operations {
         }
 
         else {
-            return factorial(top) / (factorial(top - bottom) * factorial(bottom))
+            return factorial(top, 1) / (factorial(top - bottom, 1) * factorial(bottom, 1))
         }
     }
 }
