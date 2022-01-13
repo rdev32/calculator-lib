@@ -110,19 +110,40 @@ export class basicOperations {
     **/
 
     static factorial(number) {
-        var result;
+        return factorial(number)
+    }
 
-        if(typeof number === 'string') {
+    /**
+    - Example -> C¹¹₇
+    - Returns the number of possible combinations
+
+    @param {number} top - 11
+    @param {number} bottom - 7
+    **/
+    static combinatorial(top, bottom) {
+        if(typeof top === 'string' || typeof bottom === 'string') {
             return "You must enter a number"
         }
 
         else {
-            for(var i = number- 1; i > 1; i--) {
-                result = (number *= i)
-            }
-    
-            return result;
+            return factorial(top) / (factorial(top - bottom) * factorial(bottom))
         }
+    }
+}
+
+function factorial(number) {
+    var result;
+
+    if(typeof number === 'string') {
+        return "You must enter a number"
+    }
+
+    else {
+        for(var i = number- 1; i > 1; i--) {
+            result = (number *= i)
+        }
+
+        return result;
     }
 }
 
