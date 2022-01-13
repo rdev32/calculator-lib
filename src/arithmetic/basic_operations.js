@@ -110,7 +110,11 @@ export class basicOperations {
     **/
 
     static factorial(number) {
-        return factorial(number)
+        return factorial(number, 1);
+    }
+
+    static doubleFactorial(number) {
+        return factorial(number, 2);
     }
 
     /**
@@ -131,16 +135,30 @@ export class basicOperations {
     }
 }
 
-function factorial(number) {
+function factorial(number, decrease) {
     var result;
 
     if(typeof number === 'string') {
         return "You must enter a number"
     }
 
+    else if(number < 0) {
+        return "For now, it only receives positive numbers"
+    }
+
     else {
-        for(var i = number- 1; i > 1; i--) {
-            result = (number *= i)
+        if(number === 0 || number === 1) {
+            result = 1;
+        }
+
+        else if(number === 2 && decrease === 2) {
+            result = 2;
+        }
+
+        else {
+            for(var i = number - decrease; i >= 1; i-=decrease) {
+                result = (number *= i)
+            }
         }
 
         return result;
