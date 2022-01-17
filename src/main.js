@@ -19,4 +19,3 @@ export const Percentage = percentage;
 export const Equations = equations;
 export const RuleOfThree = rule_three;
 export const Triangles = triangles;
-

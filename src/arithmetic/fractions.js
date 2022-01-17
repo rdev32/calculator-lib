@@ -82,6 +82,11 @@ export class fractions {
     }
 }
 
+/**
+@param {number} top - Numerator
+@param {number} bottom - Denominator
+**/
+
 function simplify(top, bottom) {
     var result;
 
