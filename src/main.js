@@ -22,3 +22,4 @@ export const RuleOfThree = rule_three;
 export const Triangles = triangles;
 export const LinearRegression = linear_regression;
 
+
