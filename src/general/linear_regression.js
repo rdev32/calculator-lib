@@ -27,9 +27,7 @@ export class linear_regression {
                 var a, b, equation;
 
                 a = Number.parseFloat((((length * sum_xy) - (sum_x * sum_y) ) / ( (length * sum_x2) - (sum_x ** 2))).toString().match(/^-?\d+(?:\.\d{0,5})?/)[0]);
-                
                 b = (sum_y - (a * sum_x)) / length;
-                
 
                 //Ecuacion lineal
                 equation = `${a}x + ${b}`
