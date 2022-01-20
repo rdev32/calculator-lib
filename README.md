@@ -1,62 +1,145 @@
 # Npm Ax-Calculator
 This is a quick mathematical calculator
 
-> Please be [informed](https://github.com/donatto-minaya/npm-ax-calculator/releases) of every change that is made to this calculator, many more operations are being added that can help you and an example of use is given.
-
 <a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/v/ax-calculator)</a>
 <a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/dm/ax-calculator)</a>
 
 ### Usage
 
-This calculator can be used in node.js
+npm
 ```
 npm i ax-calculator
 ```
 
-```js
-// Currently, you have these different classes that can help you
-// BasicOperations Area, Fractions Base, Operations, Percentage, Equations, RuleOfThree
-import { Area, BasicOperations } from './node_modules/ax-calculator/src/main.js'
+HTML
+```html
+<script type="module" src="index.js"><script>
 ```
 
-### Summary
-Each class contains its respective functions, which will return a string or a number depending on the parameters you have specified.
-
+- index.js
 ```js
-//Sum, substract, product, division, module, raise to, root
-BasicOperations.substract(250, 10, 35, ...); // -> 205
-BasicOperations.root(1296, 4) // -> 6
-BasicOperations.raiseTo(2, 5) // -> 32
+// In the dots you will place the class you want to use
+import { ... } from './node_modules/ax-calculator/src/main.js'
+```
 
-Operations.hypotenuse(3, 4) // -> 5
-Base.binaryToBase10(100101) // -> 37
-Area.circle(2) // -> 4π
-Fractions.division(1,6,-5,9) // -> -(3/2)
-Base.toBase(20, 3) // -> 202
+## Classes and their operations
+> Please be [informed](https://github.com/donatto-minaya/npm-ax-calculator/releases) of every change that is made to this calculator, many more operations are being added that can help you and an example of use is given.
+### Basic Operations
+- Sum, substract, product, division, module, root, raise to
+```js
+BasicOperations.sum(2,5,8,4,11) // { result: 30, toNegative: [Function: toNegative] }
+BasicOperations.substract(304, 20, 51) // { result: 233, toNegative: [Function: toNegative] }
+BasicOperations.product(35,1,9) // { result: 315, toNegative: [Function: toNegative] }
+BasicOperations.division(25,5) // 5.00
+BasicOperations.module(40,4) // 10.00
+BasicOperations.root(1296, 4) // 6
+BasicOperations.raiseTo(3, 5) // 243
+```
 
+### Base
+- binary to base 10, to base
+```js
+Base.toBase(20, 4) // -> 110
+Base.binaryToBase10(1001) // -> 9
+`` 
+
+### Fractions
+- Sum, substract, product, division, simplify
+```js
+Fractions.sum(1,2,-4,6) // 1/2 + (-4/6)-> -1/6
+Fractions.substract(-5,2,4,7) // -5/2 - 4/7 -> -43/14
+Fractions.product(10,2,-5,4) // 10/2 * (-5/4) -> -25/4
+Fractions.division(5,3,7,2) // (5/3)/(7/2) ->10/21
+Fractions.simplify(154, 6) // 77/3
+```
+
+### Equations
+- Secoond degree
+```js
+// 2x² - 3x + 3 = 0
 Equations.secondDegree(2, -3, 3) // Output: { x1: '3/4 + 𝓲√15/4' , x2: '3/4 - 𝓲√15/4'  }
 ```
 
-All methods will return a value that you can store in a variable for later display.
+### Percentage
+- What percentage is, percentage of, percent from percent, total from percent
 ```js
-//Some methods you will need to specify that you need the result, you can set it to negative
-var result = BasicOperations.sum(1,2,3)
-console.log(result) // Output: { result: 6, toNegative: [Function: toNegative] }
-console.log(result.result) // Output: 6
-console.log(result.toNegative()) // Output: -6
+// What percentaje is 12 out of 30?
+Percentage.whatPercentageIs(12, 30) // 40.00%
 
-```
-<hr></hr>
+// How much is 7% of 39?
+Percentage.percentageOf(7, 39) // 2.73
 
-Some methods contain REST type parameters
+// If 30% is 10, then 60% is...
+Percentage.percentFromPercent(30, 10, 60) // 20
 
-```js
-BasicOperations.sum(1, 5) // -> 6
-BasicOperations.sum(3,6,2,6,6,1) // -> 24
+// If 10% is 20, the total is...
+Percentage.totalFromPercent(10, 20) // 200
 ```
 
-But others require only 2, or even 1 depending on the formula
+### Rule of three
+- Simple
 ```js
-BasicOperations.division(10, 2) // -> 5
-Area.circle(2) // -> 4π / 12.56
+RuleOfThree.simple("direct", 10, undefined, 60, 90) // Output: 15
+```
+
+### Triangles
+- Functions return information about triangles
+```js
+Triangles.angle14_76()
+
+/* Output:
+{
+  hypotenuse: 'k√17',
+  opposite: 'k',
+  adjacent: '4k',
+  sin: 'k/k√17',
+  cos: '4k/k√17',
+  tan: 'k/4k'
+}
+*/
+```
+
+### Linear Regression
+- Simple
+```js
+var array_x = [100, 90, 80, 45, 50, 50, 60, 40, 25, 20];
+var array_y = [3, 5, 9, 10, 20, 21, 24, 24, 27, 35];
+
+console.log(LinearRegression.simple(array_x, array_y));
+
+//Output:
+/*
+{
+  a: -0.34788,
+  b: 37.28128,
+  equation: '-0.34788x + 37.28128',
+  coefficient: [Function: coefficient]
+}
+*/
+```
+
+### Area
+- Triangle, rectangle, circle, square, square2, trapeze
+```js
+// ...
+Area.triangle(4, 3) // 6
+Area.circle(5) // 25π
+// ...
+```
+
+### Operations
+- Hypotenuse, to romanized, log, factorial, double factorial, combinatorial
+```js
+Operations.hypotenuse(7, 9) // -> √11.40
+Operations.toRomanized(420); // CDXX
+
+// log5x = 4
+Operations.log(5, null, 4) // 625
+
+// 4!
+Operations.factorial(4); // 26
+
+// 10!!
+Operations.doubleFactorial(10); // 3840
+Operations.combinatorial(7, 3); // 35
 ```
