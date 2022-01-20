@@ -41,7 +41,7 @@ BasicOperations.raiseTo(3, 5) // 243
 ```js
 Base.toBase(20, 4) // -> 110
 Base.binaryToBase10(1001) // -> 9
-`` 
+```
 
 ### Fractions
 - Sum, substract, product, division, simplify
