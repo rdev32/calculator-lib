@@ -115,6 +115,37 @@ export class operations {
             return factorial(top, 1) / (factorial(top - bottom, 1) * factorial(bottom, 1))
         }
     }
+
+    /**
+    Returns the fibonacci series
+    @param {number} maxlength - The number of values you wish to obtain
+    @return {object} - Returns an array with the inserted values
+    **/
+    
+    static fibonacci(maxlength) {
+        let n1 = 0, n2 = 1, nextTerm;
+        var serie = [0, 1];
+
+        if(maxlength < 2) {
+            return "The base number of digits is 2";
+        }
+
+        else if(typeof maxlength === 'string') {
+            return "You must enter a numerical value";
+        }
+
+        else {
+            for (var i = 1; i <= maxlength - 2; i++) {
+                nextTerm = n1 + n2;
+                n1 = n2;
+                n2 = nextTerm;
+
+                serie.push(nextTerm)
+            }
+        }
+
+        return serie;
+    }
 }
 
 function factorial(number, decrease) {

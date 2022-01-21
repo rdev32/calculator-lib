@@ -54,14 +54,14 @@ export class basicOperations {
     Returns the division by 2 numbers
     **/
     static division(param1, param2) {
-        return (param1 / param2).toFixed(2)
+        return (param1 / param2)
     }
 
     /**
     Returns the remainder of a division by 2 numbers
     **/
     static module(param1, param2) {
-        return (param1 / param2).toFixed(2)
+        return (param1 % param2)
     }
 
     static raiseTo(number, exponent) {
