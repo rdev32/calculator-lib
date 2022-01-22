@@ -14,7 +14,7 @@ npm i ax-calculator
 HTML
 ```html
 ...
-<script crossorigin src="https://unpkg.com/ax-calculator@1.1.0/src/main.js"></script>
+<script crossorigin src="https://unpkg.com/ax-calculator@1.1.1/src/main.js"></script>
 
 ...
 <script type="module" src="index.js"></script>
