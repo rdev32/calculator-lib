@@ -126,11 +126,11 @@ function validateExpression(x, y) {
     }
 
     else if(x < 0) {
-        expression = `${x * -1}i + ${y}`
+        expression = `-${x * -1}i + ${y}`
     }
 
     else if(x < 0 && y < 0) {
-        expression = `${x * -1}i - ${y * -1}j`
+        expression = `-${x * -1}i - ${y * -1}j`
     }
 
     else {
