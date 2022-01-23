@@ -161,17 +161,28 @@ Output:
 ```
 
 ### Vectors
-- Sum, Substract, Product
+- Sum, Substract, Product, unit vector
 ```js
 // (3, 6) + (2, -7)
 var vector_a = [3, 6];
 var vector_b = [2, -7];
 
-Vectors.sum(vector_a, vector_b) // [5, -1]
+// Sum or sustract returns object
+Vectors.sum(vector_a, vector_b)
 
-// (2, -3) - (-4, -8)
-Vectors.substract( [2, -3], [-4, -8] ) // [6, 5]
+/*
+  {
+    x: 5,
+    y: -1,
+    expression: '5i - 1j',
+    cartesian: [ 5, -1 ],
+    unit_vector: [ 0.98, -0.19 ]
+  }
+*/
 
 // (2i - j) • (5i + 2j)
 Vectors.product( [2, -1], [5, 2] ) // 8
+
+// (-3, 5)
+Vector.unitVector(-3, 5);
 ```

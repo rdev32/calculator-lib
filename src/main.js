@@ -25,3 +25,4 @@ export const Triangles = triangles;
 export const LinearRegression = linear_regression;
 export const SystemEquation = system_equation;
 export const Vectors = vectors;
+
