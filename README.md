@@ -14,7 +14,7 @@ npm i ax-calculator
 HTML
 ```html
 ...
-<script crossorigin src="https://unpkg.com/ax-calculator@1.1.1/src/main.js"></script>
+<script crossorigin src="https://unpkg.com/ax-calculator@1.1.2/src/main.js"></script>
 
 ...
 <script type="module" src="index.js"></script>
@@ -147,7 +147,7 @@ Operations.factorial(4); // 26
 Operations.doubleFactorial(10); // 3840
 Operations.combinatorial(7, 3); // 35
 
-Operations.fibonacci(5)
+Operations.fibonacci(13)
 
 /*
 Output:
@@ -158,4 +158,20 @@ Output:
     144
 ]
 */
+```
+
+### Vectors
+- Sum, Substract, Product
+```js
+// (3, 6) + (2, -7)
+var vector_a = [3, 6];
+var vector_b = [2, -7];
+
+Vectors.sum(vector_a, vector_b) // [5, -1]
+
+// (2, -3) - (-4, -8)
+Vectors.substract( [2, -3], [-4, -8] ) // [6, 5]
+
+// (2i - j) • (5i + 2j)
+Vectors.product( [2, -1], [5, 2] ) // 8
 ```

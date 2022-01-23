@@ -11,6 +11,7 @@ import { system_equation } from './algebra/system_equation.js';
 import { linear_regression } from './general/linear_regression.js';
 import { rule_three } from './arithmetic/rule_three.js';
 import { triangles } from './trigonometry/triangles.js';
+import { vectors } from './physics/vectors.js';
 
 export const BasicOperations = basicOperations;
 export const Area = area;
@@ -23,3 +24,4 @@ export const RuleOfThree = rule_three;
 export const Triangles = triangles;
 export const LinearRegression = linear_regression;
 export const SystemEquation = system_equation;
+export const Vectors = vectors;
