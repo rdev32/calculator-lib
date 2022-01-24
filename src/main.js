@@ -26,3 +26,8 @@ export const LinearRegression = linear_regression;
 export const SystemEquation = system_equation;
 export const Vectors = vectors;
 
+
+
+import { elements } from './chemistry/elements.js';
+
+console.log(elements)
