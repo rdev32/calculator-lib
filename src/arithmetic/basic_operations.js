@@ -3,16 +3,25 @@ export class basicOperations {
     Returns the sum of the numbers
     @param {number} parameters You can add as many numbers as you wish
     **/
-    static sum(...parameters) {        
-        var result = parameters.reduce((previous, current) => {
-            return  previous + current
-        });
-
-        return {
-            result,
-            toNegative() {
-                return result * -1;
+    static sum(...parameters) {      
+        for(var i = 0; i <= parameters.length - 1; i++) {
+            if(typeof parameters[i] != 'number') {
+                return "Only numbers"
             }
+
+            else {
+                var result = parameters.reduce((previous, current) => {
+                    return  previous + current
+                });
+        
+                return {
+                    result,
+                    toNegative() {
+                        return result * -1;
+                    }
+                }
+            }
+
         }
     }
 
@@ -21,14 +30,22 @@ export class basicOperations {
     @param {number} parameters You can add as many numbers as you wish
     **/
     static substract(...parameters) {
-        var result =  parameters.reduce((previous, current) => {
-            return previous - current;
-        });
+        for(var i = 0; i <= parameters.length - 1; i++) {
+            if(typeof parameters[i] != 'number') {
+                return "Only numbers"
+            }
 
-        return {
-            result,
-            toNegative() {
-                return result * -1;
+            else {
+                var result =  parameters.reduce((previous, current) => {
+                    return previous - current;
+                });
+        
+                return {
+                    result,
+                    toNegative() {
+                        return result * -1;
+                    }
+                }
             }
         }
     }
@@ -38,16 +55,25 @@ export class basicOperations {
     @param {number} parameters You can add as many numbers as you wish
     **/
     static product(...parameters) {
-        var result = parameters.reduce((previous, current) => {
-            return previous * current;
-        });
+        for(var i = 0; i <= parameters.length - 1; i++) {
+            if(typeof parameters[i] != 'number') {
+                return "Only numbers"
+            }
 
-        return {
-            result,
-            toNegative() {
-                return result * -1;
+            else {
+                var result = parameters.reduce((previous, current) => {
+                    return previous * current;
+                });
+        
+                return {
+                    result,
+                    toNegative() {
+                        return result * -1;
+                    }
+                }
             }
         }
+        
     }
 
     /**

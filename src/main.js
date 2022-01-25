@@ -28,6 +28,3 @@ export const Vectors = vectors;
 
 
 
-import { elements } from './chemistry/elements.js';
-
-console.log(elements)
