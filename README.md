@@ -14,7 +14,7 @@ npm i ax-calculator
 HTML
 ```html
 ...
-<script crossorigin src="https://unpkg.com/ax-calculator@1.1.4/src/main.js"></script>
+<script crossorigin src="https://unpkg.com/ax-calculator@1.1.5/src/main.js"></script>
 
 ...
 <script type="module" src="index.js"></script>
@@ -185,4 +185,16 @@ Vectors.product( [2, -1], [5, 2] ) // 8
 
 // (-3, 5)
 Vector.unitVector(-3, 5);
+```
+
+### System of equations
+- Double
+<img src="https://user-images.githubusercontent.com/68967448/150624746-9dcd85bb-58ac-4692-a083-0313d7b9674a.png" width="150px">
+
+```js
+var equation1 = [1, 2, 10];
+var equation2 = [2, -1, 5]
+
+console.log(SystemEquation.double(equation1, equation2))
+// { x: 4, y: 3 }
 ```

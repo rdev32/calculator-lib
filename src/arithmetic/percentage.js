@@ -6,8 +6,14 @@ export class percentage {
     @param {number} total 30
     **/
     static whatPercentageIs(number, total) {
-        var result = (number * 100) / total;
-        return String(result.toFixed(2)) + "%";
+        if(typeof number != 'number' || typeof total != 'number') {
+            return "Only numbers"
+        }
+
+        else {
+            var result = (number * 100) / total;
+            return String(result.toFixed(2)) + "%";
+        }
     }
 
     /**    
@@ -18,8 +24,14 @@ export class percentage {
     **/
 
     static percentageOf(percentage, total) {
-        var result = (percentage * total) / 100;
-        return String(result)
+        if(typeof percentage != 'number' || typeof total != 'number') {
+            return "Only numbers"
+        }
+
+        else {
+            var result = (percentage * total) / 100;
+            return result
+        }
     }
 
     /**
@@ -60,6 +72,4 @@ export class percentage {
             return String(result.toFixed(2));
         }
     }
-
-
 }

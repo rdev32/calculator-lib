@@ -52,6 +52,14 @@ export var elements = [
   addElement("Sb", 51, 122, "Antimony", "V A", "Metalloid")
 ]
 
+/**
+@param {string} simbol
+@param {number} atomic_number
+@param {number} atomic_mass
+@param {string} name
+@param {string} group
+@param {string} type
+**/
 function addElement(simbol, atomic_number, atomic_mass, name, group, type) {
   var element = {
     "simbol" : simbol,
