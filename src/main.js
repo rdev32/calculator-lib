@@ -12,7 +12,7 @@ import { linear_regression } from './general/linear_regression.js';
 import { rule_three } from './arithmetic/rule_three.js';
 import { triangles } from './trigonometry/triangles.js';
 import { vectors } from './physics/vectors.js';
-import { elements } from './chemistry/elements.js';
+import { chemical_elements } from './chemistry/chemical_elements.js';
 
 export const BasicOperations = basicOperations;
 export const Area = area;
@@ -26,4 +26,6 @@ export const Triangles = triangles;
 export const LinearRegression = linear_regression;
 export const SystemEquation = system_equation;
 export const Vectors = vectors;
-export const ChemicalElements = elements;
+export const ChemicalElements = chemical_elements;
+
+console.log(ChemicalElements.show("H"))

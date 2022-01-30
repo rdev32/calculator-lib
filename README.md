@@ -4,6 +4,9 @@ This is a quick mathematical calculator
 <a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/v/ax-calculator)</a>
 <a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/dm/ax-calculator)</a>
 
+## Last added feature
+- Chemical elements
+
 ### Usage
 
 npm
@@ -14,7 +17,7 @@ npm i ax-calculator
 HTML
 ```html
 ...
-<script crossorigin src="https://unpkg.com/ax-calculator@1.1.5/src/main.js"></script>
+<script crossorigin src="https://unpkg.com/ax-calculator@1.1.6/src/main.js"></script>
 
 ...
 <script type="module" src="index.js"></script>
@@ -197,4 +200,30 @@ var equation2 = [2, -1, 5]
 
 console.log(SystemEquation.double(equation1, equation2))
 // { x: 4, y: 3 }
+```
+
+### Chemical elements
+- Show, obtain by group, obtain by family
+```js
+// You can enter the name, symbol, or atomic number of an element to obtain its details, 
+// if you do not enter anything it will return the complete list.
+ChemicalElements.show("H")
+
+/*
+  {
+    simbol: 'H',
+    atomic_number: 1,
+    atomic_mass: 1,
+    name: 'Hydrogen',
+    group: 'I A',
+    type: 'Non-metal',
+    electroegativity: 2.2
+  }
+*/
+
+//  I A, II A, III A, ...
+ChemicalElements.obtainByGroup("I B") // object
+
+// You will place the family of the elements you want to obtain
+ChemicalElements.obtainByFamily("Halogen") // object
 ```

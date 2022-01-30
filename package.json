@@ -1,6 +1,6 @@
 {
   "name": "ax-calculator",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Complex Math Calculator",
   "main": "main.js",
   "scripts": {
@@ -17,7 +17,9 @@
     "area",
     "operations",
     "linear",
-    "regression"
+    "regression",
+    "chemistry",
+    "elements"
   ],
   "type": "module",
   "author": "",
