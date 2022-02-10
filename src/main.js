@@ -13,6 +13,7 @@ import { rule_three } from './arithmetic/rule_three.js';
 import { triangles } from './trigonometry/triangles.js';
 import { vectors } from './physics/vectors.js';
 import { chemical_elements } from './chemistry/chemical_elements.js';
+import { angle_measurements } from './trigonometry/angle_measurements.js';
 
 export const BasicOperations = basicOperations;
 export const Area = area;
@@ -27,5 +28,6 @@ export const LinearRegression = linear_regression;
 export const SystemEquation = system_equation;
 export const Vectors = vectors;
 export const ChemicalElements = chemical_elements;
+export const AngleMeasurements = angle_measurements;
 
-console.log(ChemicalElements.show("H"))
+console.log(AngleMeasurements.centesimal(40).toRadian());

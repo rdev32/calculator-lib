@@ -126,9 +126,9 @@ export var elements = [
 @param {string} name
 @param {string} group
 @param {string} type
-@param {number} electroegativity
+@param {number} electronegativity
 **/
-function addElement(simbol, atomic_number, atomic_mass, name, group, type, electroegativity) {
+function addElement(simbol, atomic_number, atomic_mass, name, group, type, electronegativity) {
   var element = {
     "simbol" : simbol,
     "atomic_number" : atomic_number,
@@ -136,7 +136,7 @@ function addElement(simbol, atomic_number, atomic_mass, name, group, type, elect
     "name" : name,
     "group" : group,
     "type" : type, 
-    "electroegativity" : electroegativity
+    "electronegativity" : electronegativity
   }
 
   return element;
