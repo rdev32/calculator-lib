@@ -5,7 +5,7 @@ This is a quick mathematical calculator
 <a href="https://www.npmjs.com/package/ax-calculator">![npm](https://img.shields.io/npm/dm/ax-calculator)</a>
 
 ## Last added feature
-- Chemical elements
+- Angle measurements system
 
 ### Usage
 
@@ -17,7 +17,7 @@ npm i ax-calculator
 HTML
 ```html
 ...
-<script crossorigin src="https://unpkg.com/ax-calculator@1.1.9/src/main.js"></script>
+<script crossorigin src="https://unpkg.com/ax-calculator@1.1.10/src/main.js"></script>
 
 ...
 <script type="module" src="index.js"></script>
