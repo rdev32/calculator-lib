@@ -17,7 +17,7 @@ npm i ax-calculator
 HTML
 ```html
 ...
-<script crossorigin src="https://unpkg.com/ax-calculator@1.1.8/src/main.js"></script>
+<script crossorigin src="https://unpkg.com/ax-calculator@1.1.9/src/main.js"></script>
 
 ...
 <script type="module" src="index.js"></script>
@@ -51,13 +51,14 @@ Base.binaryToBase10(1001) // -> 9
 ```
 
 ### Fractions
-- Sum, substract, product, division, simplify
+- Sum, substract, product, division, simplify, destructure
 ```js
 Fractions.sum(1,2,-4,6) // 1/2 + (-4/6)-> -1/6
 Fractions.substract(-5,2,4,7) // -5/2 - 4/7 -> -43/14
 Fractions.product(10,2,-5,4) // 10/2 * (-5/4) -> -25/4
 Fractions.division(5,3,7,2) // (5/3)/(7/2) ->10/21
 Fractions.simplify(154, 6) // 77/3
+Fractions.destructure("12/5") // { top: '12', bottom: '5' }
 ```
 
 ### Equations
@@ -226,4 +227,22 @@ ChemicalElements.obtainByGroup("I B") // object
 
 // You will place the family of the elements you want to obtain
 ChemicalElements.obtainByFamily("Halogen") // object
+```
+
+
+### Angle measurements system
+- Radian, Centesimal, Sexasegimal _`(toRadian, toCentesimal, toSexagesimal)`_
+```js
+...
+
+// 2π/5
+AngleMeasurements.radian("2/5").toCentesimal() // 80
+
+// 40ᵍ
+AngleMeasurements.centesimal(40).toRadian() // π/5
+
+// 45°
+AngleMeasurements.sexagesimal(45).toCentesimal() // 50
+
+...
 ```

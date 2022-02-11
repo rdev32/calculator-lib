@@ -80,6 +80,10 @@ export class fractions {
     static simplify(top, bottom) {
         return simplify(top, bottom);
     }
+
+    static destructure(fraction) {
+        return destructure(fraction);
+    }
 }
 
 /**
@@ -124,4 +128,12 @@ function simplify(top, bottom) {
     }
 
     return result;
+}
+
+function destructure(string) {
+    let array = string.split('/');
+    var top =  array[0], bottom = array[1];
+    return {
+        top, bottom
+    }
 }

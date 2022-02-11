@@ -29,5 +29,3 @@ export const SystemEquation = system_equation;
 export const Vectors = vectors;
 export const ChemicalElements = chemical_elements;
 export const AngleMeasurements = angle_measurements;
-
-console.log(AngleMeasurements.centesimal(40).toRadian());

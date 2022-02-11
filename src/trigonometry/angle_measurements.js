@@ -1,16 +1,55 @@
 import { fractions } from '../arithmetic/fractions.js';
 
+var piNumber = 3.1415926
 var pi = "π";
 
 export class angle_measurements {
-    static radian() {
-        return {
-            toCentesimal(number) {
 
+    /**
+    @param {number_string} radian You can place a string (fraction) or a number
+    **/
+    static radian(radian) {
+        return {
+            toCentesimal() {
+                if(typeof radian == 'string') {
+                    if(typeof destructure(radian).top == 'undefined' || typeof destructure(radian).bottom == 'undefined') {
+                        return "Place a fraction"
+                    }
+
+                    else {
+                        var top = destructure(radian).top, bottom = destructure(radian).bottom;
+                        return (top * 200) / bottom;
+                    }
+                }
+
+                else if(typeof radian == 'number') {
+                    return Number.parseFloat(((radian * 200) / piNumber).toFixed(3));
+                }
+
+                else {
+                    return "Place a number or string (fraction)"
+                }
             },
 
             toSexagesimal() {
+                if(typeof radian == 'string') {
+                    if(typeof destructure(radian).top == 'undefined' || typeof destructure(radian).bottom == 'undefined') {
+                        return "Place a fraction"
+                    }
 
+                    else {
+                        var top = destructure(radian).top, bottom = destructure(radian).bottom;
+                        return (top * 180) / bottom;
+                    }
+                }
+
+                else if(typeof radian == 'number') {
+                    return Number.parseFloat(((radian * 180) / piNumber).toFixed(3));
+                }
+
+                else {
+                    return "Place a number or string (fraction)"
+                }
             }
         }
     }
@@ -42,7 +81,13 @@ export class angle_measurements {
             },
 
             toSexagesimal() {
-                
+                if(typeof number !== 'number') {
+                    return "Place a number"
+                }
+
+                else {
+                    return (number * 9) / 10
+                }
             }
         }
 
