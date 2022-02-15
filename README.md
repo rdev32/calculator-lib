@@ -17,7 +17,7 @@ npm i ax-calculator
 HTML
 ```html
 ...
-<script crossorigin src="https://unpkg.com/ax-calculator@1.1.10/src/main.js"></script>
+<script crossorigin src="https://unpkg.com/ax-calculator@1.1.11/src/main.js"></script>
 
 ...
 <script type="module" src="index.js"></script>
@@ -136,7 +136,7 @@ Area.circle(5) // 25π
 ```
 
 ### Operations
-- Hypotenuse, to romanized, log, factorial, double factorial, combinatorial, fibonacci
+- Hypotenuse, to romanized, log, factorial, double factorial, combinatorial, fibonacci, divisors
 ```js
 Operations.hypotenuse(7, 9) // -> √11.40
 Operations.toRomanized(420); // CDXX
@@ -150,6 +150,8 @@ Operations.factorial(4); // 26
 // 10!!
 Operations.doubleFactorial(10); // 3840
 Operations.combinatorial(7, 3); // 35
+
+Operations.divisors(25); // [ 1, 5, 25 ]
 
 Operations.fibonacci(13)
 

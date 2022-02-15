@@ -22,8 +22,6 @@ export class linear_regression {
                 var sum_x = array_x.reduce(sum)
                 var sum_x2 = array_x2.reduce(sum);
                 var sum_xy = array_xy.reduce(sum);
-                
-                
 
                 // Inicia la formula
                 var a, b, equation;

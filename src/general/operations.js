@@ -146,6 +146,35 @@ export class operations {
 
         return serie;
     }
+
+    /**
+    Returns the divisors of a number
+
+    @param {number} number
+    @return {object} 
+    **/
+
+    static divisors(number) {
+        if(typeof number !== 'number') {
+            return "Error in divisors: Place a number"
+        }
+
+        else {
+            return divisors(number);
+        }
+    }
+}
+
+function divisors(number) {
+    var arr = [];
+
+    for(var i = 1; i <= number; i++) {
+        if(number % i == 0) {
+            arr.push(i);
+        }
+    }
+
+    return arr;
 }
 
 function factorial(number, decrease) {
